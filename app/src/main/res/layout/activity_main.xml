@@ -14,7 +14,7 @@
 
     <TextView
         android:id="@+id/twoTextView"
-        android:text="Versus!  " android:layout_width="wrap_content"
+        android:text="Versus! " android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:layout_alignParentEnd="true" />
@@ -30,7 +30,7 @@
     android:layout_alignStart="@id/oneTextView"
     android:adjustViewBounds="true"
     android:cropToPadding="false"
-    android:scaleType="fitXY" />
+    android:scaleType="fitCenter" />
 
     <ImageButton
         android:id="@+id/buttonTwo"
@@ -43,6 +43,6 @@
         android:layout_alignStart="@id/twoTextView"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
-        android:scaleType="fitXY" />
+        android:scaleType="fitCenter" />
 
 </RelativeLayout>

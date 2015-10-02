@@ -9,15 +9,30 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TrainingActivity"></activity>
-        <activity android:name=".OptionsActivity"></activity>
+        <activity android:name=".SinglePlayerModeActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".MultiPlayerModeActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".TwoPlayerModeActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ThreePlayerModeActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".FourPlayerModeActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".OptionsActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

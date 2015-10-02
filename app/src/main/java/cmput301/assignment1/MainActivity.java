@@ -15,10 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageButton oneButton = (ImageButton) findViewById(R.id.buttonOne);
+        ImageButton twoButton = (ImageButton) findViewById(R.id.buttonTwo);
         oneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, TrainingActivity.class));
+                startActivity(new Intent(MainActivity.this, SinglePlayerModeActivity.class));
+            }
+        });
+        twoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MultiPlayerModeActivity.class));
             }
         });
     }
