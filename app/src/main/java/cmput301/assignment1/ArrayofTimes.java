@@ -5,6 +5,7 @@ import java.util.Date;
 /**
  * Created by JustinWong on 15-10-02.
  */
+/*
 public abstract class ArrayofTimes {
     private String text;
     protected Date date;
@@ -47,3 +48,4 @@ public abstract class ArrayofTimes {
     }
 
 }
+*/

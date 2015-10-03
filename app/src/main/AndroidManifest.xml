@@ -39,6 +39,12 @@
         <activity android:name=".savingFiles"
             android:label="@string/app_name">
         </activity>
+        <activity android:name=".loadingFiles"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".MinReactionsActivity"
+            android:label="@string/app_name">
+        </activity>
         <activity android:name=".BuzzerCountsActivity"
             android:label="@string/app_name">
         </activity>

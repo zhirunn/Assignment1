@@ -18,7 +18,8 @@ import java.util.ArrayList;
 
 public class SinglePlayerModeActivity extends Activity{
 
-    private static final String FILENAME = "file.sav";
+    //not used
+    //private static final String FILENAME = "reaction.sav";
     private CountDownTimer countDownTimer;
     savingFiles saving = new savingFiles();
 
@@ -78,8 +79,8 @@ public class SinglePlayerModeActivity extends Activity{
                     public void onClick(View v) {
                         long ltimes = (System.currentTimeMillis() - initialTime);
                         int itimes = (int) ltimes;
-                        //next line causes the app to crash.
-                        saving.saveInFile(itimes, getApplicationContext());
+                        //next line used to cause the app to crash.
+                        saving.saveInFile(itimes + '\n', getApplicationContext());
                         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayerModeActivity.this);
                         builder.setTitle("You Did It!")
                                 .setCancelable(false)

@@ -16,17 +16,18 @@ import java.util.ArrayList;
 public class savingFiles extends Activity {
 
     public static final String FILENAME = "reaction.sav";
-    public EditText saveText;
-    public ArrayList<ArrayofTimes> Rtimes = new ArrayList<ArrayofTimes>();
+
+    //unused code
+    //public EditText saveText;
+    //public ArrayList<ArrayofTimes> Rtimes = new ArrayList<ArrayofTimes>();
 
     //doesn't work. id.body is in main_reactions.xml
     //saveText = (EditText) findViewById(R.id.body);
 
-
     public void saveInFile(int num, Context ctx) {
         FileOutputStream fos;
         try {
-            //next line has some strange bug. crashes the app
+            //next line used to have some strange bug. crashed the app
             fos = ctx.openFileOutput(FILENAME, MODE_PRIVATE);
             OutputStreamWriter writer = new OutputStreamWriter(fos);
             writer.write(num);

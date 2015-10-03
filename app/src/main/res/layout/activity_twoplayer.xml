@@ -25,15 +25,6 @@
                 android:adjustViewBounds="true"
                 android:layout_gravity="end"
                 android:scaleType="fitCenter" />
-            <ImageButton
-                android:id="@+id/buttonP2_2"
-                android:src="@drawable/blue"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:layout_gravity="end"
-                android:scaleType="fitCenter" />
             <TextView
                 android:id="@+id/player2TextView"
                 android:layout_width="wrap_content"
@@ -56,15 +47,6 @@
             android:scaleType="fitCenter">
             <ImageButton
                 android:id="@+id/buttonP1"
-                android:src="@drawable/red"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:layout_gravity="end"
-                android:scaleType="fitCenter" />
-            <ImageButton
-                android:id="@+id/buttonP1_2"
                 android:src="@drawable/red"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"

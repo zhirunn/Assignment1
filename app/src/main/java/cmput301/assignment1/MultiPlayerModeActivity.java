@@ -21,7 +21,6 @@ public class MultiPlayerModeActivity extends Activity{
         ImageButton fourplayerButton = (ImageButton) findViewById(R.id.button4Players);
 
 
-
         twoplayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
