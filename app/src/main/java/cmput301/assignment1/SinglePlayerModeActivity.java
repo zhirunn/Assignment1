@@ -79,7 +79,7 @@ public class SinglePlayerModeActivity extends Activity{
                         long ltimes = (System.currentTimeMillis() - initialTime);
                         int itimes = (int) ltimes;
                         //next line causes the app to crash.
-                        saving.saveInFile(itimes);
+                        saving.saveInFile(itimes, getApplicationContext());
                         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayerModeActivity.this);
                         builder.setTitle("You Did It!")
                                 .setCancelable(false)
