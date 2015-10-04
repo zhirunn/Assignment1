@@ -1,38 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/minimumTextView"
-        android:text="Minimum Time" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:clickable="false" />
-    <TextView
-        android:id="@+id/maximumTextView"
-        android:text="Maximum Time" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:clickable="false"
-        android:layout_below="@+id/minimumTextView"
-        android:layout_alignParentStart="true" />
-    <TextView
-        android:id="@+id/averageTextView"
-        android:text="Average Time" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:clickable="false"
-        android:layout_below="@+id/maximumTextView"
-        android:layout_alignParentStart="true" />
-    <TextView
-        android:id="@+id/medianTextView"
-        android:text="Median Time" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:clickable="false"
-        android:layout_below="@+id/averageTextView"
-        android:layout_alignParentStart="true" />
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport = "true">
 
 
-</RelativeLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/minimumTextView"
+            android:text="-----Minimum Times-----" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:clickable="false" />
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/minimumLAllTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/minimumLAllDisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/minimumL10TextView"
+                android:text="Last 10" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/minimumL10DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="148dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/minimumL100TextView"
+                android:text="Last 100" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/minimumL100DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/maximumTextView"
+            android:text="-----Maximum Times----" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:clickable="false" />
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/maximumLAllTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/maximumLAllDisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/maximumL10TextView"
+                android:text="Last 10" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/maximumL10DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="148dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/maximumL100TextView"
+                android:text="Last 100" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/maximumL100DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/averageTextView"
+            android:text="-----Average Times-------" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:clickable="false" />
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/averageLAllTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/averageLAllDisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/averageL10TextView"
+                android:text="Last 10" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/averageL10DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="148dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/averageL100TextView"
+                android:text="Last 100" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/averageL100DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/medianTextView"
+            android:text="-----Median Times--------" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:clickable="false" />
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/medianLAllTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/medianLAllDisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/medianL10TextView"
+                android:text="Last 10" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/medianL10DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="148dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/medianL100TextView"
+                android:text="Last 100" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false" />
+            <TextView
+                android:id="@+id/medianL100DisplayTextView"
+                android:text="All" android:layout_width="wrap_content"
+                android:layout_marginStart="135dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:clickable="false"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

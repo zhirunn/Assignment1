@@ -18,11 +18,18 @@ public class ReactionTimesActivity extends Activity {
         setContentView(R.layout.activity_reactiontimes);
 
         ImageButton listelementsButton = (ImageButton) findViewById(R.id.buttonListElements);
+        ImageButton statisticsButton = (ImageButton) findViewById(R.id.buttonStatistics);
 
         listelementsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ReactionTimesActivity.this, ShowElementsInArrayListActivity.class));
+            }
+        });
+        statisticsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ReactionTimesActivity.this, StatisticsActivity.class));
             }
         });
 

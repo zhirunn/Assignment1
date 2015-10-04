@@ -41,7 +41,7 @@
 
     <ImageButton
         android:id="@+id/buttonTwo"
-        android:src="@drawable/black"
+        android:src="@drawable/purple"
         android:background="@null"
         android:layout_width="120dp"
         android:layout_height="120dp"
@@ -53,7 +53,7 @@
 
     <ImageButton
         android:id="@+id/buttonThree"
-        android:src="@drawable/purple"
+        android:src="@drawable/lime"
         android:background="@null"
         android:layout_width="120dp"
         android:layout_height="120dp"
