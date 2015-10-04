@@ -21,7 +21,6 @@ public class MinReactionsActivity extends Activity {
         loading.reactionTimesList.setAdapter(loading.adapter);
         //loading.adapter.notifyDataSetChanged();
 
-
         loading.loadFromFile(getApplicationContext());
 
     }

@@ -10,16 +10,12 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 /**
  * Created by JustinWong on 15-09-25.
  */
 
 public class SinglePlayerModeActivity extends Activity{
 
-    //not used
-    //private static final String FILENAME = "reaction.sav";
     private CountDownTimer countDownTimer;
     savingFiles saving = new savingFiles();
 
@@ -74,8 +70,8 @@ public class SinglePlayerModeActivity extends Activity{
                         long ltimes = (System.currentTimeMillis() - initialTime);
                         int itimes = (int) ltimes;
 
+                        loadingFiles.Rtimes.add(Integer.toString(itimes));
                         saving.saveInFile(itimes, getApplicationContext());
-                        //do I need this?
                         setResult(RESULT_OK);
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayerModeActivity.this);
