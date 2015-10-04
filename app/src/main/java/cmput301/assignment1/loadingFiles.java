@@ -34,15 +34,13 @@ public class loadingFiles {
 
             BufferedReader read = new BufferedReader(new InputStreamReader(fis));
             String line;
-            while ((line = read.readLine()) != null)
-            {
+            while ((line = read.readLine()) != null) {
                 Rtimes.add(line);
             }
             read.close();
             fis.close();
 
         } catch (FileNotFoundException e) {
-            //throw new RuntimeException(e);
             Rtimes = new ArrayList<String>();
         } catch (IOException e) {
             throw new RuntimeException(e);

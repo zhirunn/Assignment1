@@ -23,7 +23,6 @@ public class savingFiles {
             OutputStreamWriter writer = new OutputStreamWriter(fos);
             writer.write(Integer.toString(num));
             writer.flush();
-            writer.close();
             fos.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
