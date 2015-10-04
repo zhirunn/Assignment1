@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/minimumTextView"
+        android:text="Minimum Time" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:clickable="false" />
+    <TextView
+        android:id="@+id/maximumTextView"
+        android:text="Maximum Time" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:clickable="false"
+        android:layout_below="@+id/minimumTextView"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/averageTextView"
+        android:text="Average Time" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:clickable="false"
+        android:layout_below="@+id/maximumTextView"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/medianTextView"
+        android:text="Median Time" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:clickable="false"
+        android:layout_below="@+id/averageTextView"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

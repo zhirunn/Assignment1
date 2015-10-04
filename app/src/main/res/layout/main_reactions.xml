@@ -19,7 +19,8 @@
 
     </ListView>
 
-    <!--
+<!--
+
     <TextView
         android:id="@+id/hello"
         android:layout_width="fill_parent"

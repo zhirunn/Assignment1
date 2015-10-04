@@ -51,14 +51,11 @@ public class SinglePlayerModeActivity extends Activity{
 
         countDownTimer = new CountDownTimer(randNL, 1000) {
             public void onTick(long millisUntilFinished) {
-                ImageButton mainButton2 = (ImageButton) findViewById(R.id.buttonMain2);
                 ImageButton mainButton = (ImageButton) findViewById(R.id.buttonMain);
-                mainButton2.setVisibility(View.GONE);
-                mainButton.setVisibility(View.VISIBLE);
                 mainButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        TextView text=(TextView)findViewById(R.id.trainingTextView);
+                        TextView text=(TextView)findViewById(R.id.singleTextView);
                         text.setText("TOO EARLY!!!!");
                         cancel();
                         start();
@@ -68,19 +65,21 @@ public class SinglePlayerModeActivity extends Activity{
 
             public void onFinish() {
                 ImageButton mainButton = (ImageButton) findViewById(R.id.buttonMain);
-                ImageButton mainButton2 = (ImageButton) findViewById(R.id.buttonMain2);
-                mainButton.setVisibility(View.GONE);
-                mainButton2.setVisibility(View.VISIBLE);
-                TextView text=(TextView)findViewById(R.id.trainingTextView);
+                TextView text=(TextView)findViewById(R.id.singleTextView);
                 text.setText("PRESS THE BUTTON!!!");
                 final long initialTime = System.currentTimeMillis();
-                mainButton2.setOnClickListener(new View.OnClickListener() {
+                mainButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         long ltimes = (System.currentTimeMillis() - initialTime);
                         int itimes = (int) ltimes;
+
+                        loadingFiles.Rtimes.add(Integer.toString(itimes));
                         //next line used to cause the app to crash.
-                        saving.saveInFile(itimes + '\n', getApplicationContext());
+                        saving.saveInFile(itimes, getApplicationContext());
+                        //do I need this?
+                        setResult(RESULT_OK);
+
                         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayerModeActivity.this);
                         builder.setTitle("You Did It!")
                                 .setCancelable(false)
@@ -103,10 +102,8 @@ public class SinglePlayerModeActivity extends Activity{
                         message.show();
                     }
                 });
-
             }
         };
-
     }
 }
 
