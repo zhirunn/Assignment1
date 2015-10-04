@@ -19,9 +19,6 @@ public class MinReactionsActivity extends Activity {
         loading.reactionTimesList = (ListView) findViewById(R.id.reactionTimesList);
         loading.adapter = new ArrayAdapter<String>(this, R.layout.list_reactions, loading.Rtimes);
         loading.reactionTimesList.setAdapter(loading.adapter);
-        //loading.adapter.notifyDataSetChanged();
-
-        loading.loadFromFile(getApplicationContext());
 
     }
 }

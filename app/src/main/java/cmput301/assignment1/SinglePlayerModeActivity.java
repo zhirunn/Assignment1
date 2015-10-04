@@ -18,6 +18,8 @@ public class SinglePlayerModeActivity extends Activity{
 
     private CountDownTimer countDownTimer;
     savingFiles saving = new savingFiles();
+    loadingFiles loading = new loadingFiles();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -70,8 +72,8 @@ public class SinglePlayerModeActivity extends Activity{
                         long ltimes = (System.currentTimeMillis() - initialTime);
                         int itimes = (int) ltimes;
 
-                        loadingFiles.Rtimes.add(Integer.toString(itimes));
                         saving.saveInFile(itimes, getApplicationContext());
+                        loading.loadFromFile(getApplicationContext());
                         setResult(RESULT_OK);
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayerModeActivity.this);

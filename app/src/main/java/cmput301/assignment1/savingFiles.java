@@ -21,7 +21,6 @@ public class savingFiles extends Activity {
         try {
             fos = ctx.openFileOutput(FILENAME, 0);
             OutputStreamWriter writer = new OutputStreamWriter(fos);
-            //BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos));
             writer.write(Integer.toString(num));
             writer.flush();
             writer.close();

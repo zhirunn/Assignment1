@@ -34,18 +34,12 @@ public class loadingFiles extends Activity {
 
             BufferedReader read = new BufferedReader(new InputStreamReader(fis));
             String line;
-            //while ((line = read.readLine()) != null)
-            //{
-            //    Rtimes.add(line);
-            //}
+            while ((line = read.readLine()) != null)
+            {
+                Rtimes.add(line);
+            }
             read.close();
             fis.close();
-
-            //Scanner read = new Scanner(fis);
-            //while (read.hasNextLine())
-            //{
-            //    Rtimes.add(read.next());
-            //}
 
         } catch (FileNotFoundException e) {
             //throw new RuntimeException(e);
