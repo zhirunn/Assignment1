@@ -12,7 +12,7 @@ import java.io.OutputStreamWriter;
 /**
  * Created by JustinWong on 15-10-02.
  */
-public class savingFiles extends Activity {
+public class savingFiles {
 
     public static final String FILENAME = "reaction.sav";
 

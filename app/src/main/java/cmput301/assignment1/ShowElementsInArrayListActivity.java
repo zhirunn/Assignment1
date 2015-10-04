@@ -8,13 +8,13 @@ import android.widget.ListView;
 /**
  * Created by JustinWong on 15-10-03.
  */
-public class MinReactionsActivity extends Activity {
+public class ShowElementsInArrayListActivity extends Activity {
 
     loadingFiles loading = new loadingFiles();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_reactions);
+        setContentView(R.layout.listmain_reactions);
 
         loading.reactionTimesList = (ListView) findViewById(R.id.reactionTimesList);
         loading.adapter = new ArrayAdapter<String>(this, R.layout.list_reactions, loading.Rtimes);

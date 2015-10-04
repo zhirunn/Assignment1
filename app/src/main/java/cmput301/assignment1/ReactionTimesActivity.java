@@ -17,12 +17,12 @@ public class ReactionTimesActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reactiontimes);
 
-        ImageButton minButton = (ImageButton) findViewById(R.id.buttonMin);
+        ImageButton listelementsButton = (ImageButton) findViewById(R.id.buttonListElements);
 
-        minButton.setOnClickListener(new View.OnClickListener() {
+        listelementsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ReactionTimesActivity.this, MinReactionsActivity.class));
+                startActivity(new Intent(ReactionTimesActivity.this, ShowElementsInArrayListActivity.class));
             }
         });
 

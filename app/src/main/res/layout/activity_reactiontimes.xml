@@ -18,7 +18,7 @@
             android:layout_gravity="end"
             android:scaleType="fitCenter">
             <ImageButton
-                android:id="@+id/buttonMin"
+                android:id="@+id/buttonListElements"
                 android:src="@drawable/red"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -26,12 +26,12 @@
                 android:layout_gravity="end"
                 android:scaleType="fitCenter" />
             <TextView
-                android:id="@+id/minTextView"
+                android:id="@+id/listElementsTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="false"
-                android:text="Minimum Times"
+                android:text="Show Elements"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
         </FrameLayout>

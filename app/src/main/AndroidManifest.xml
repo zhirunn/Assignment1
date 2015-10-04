@@ -42,7 +42,7 @@
         <activity android:name=".loadingFiles"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".MinReactionsActivity"
+        <activity android:name=".ShowElementsInArrayListActivity"
             android:label="@string/app_name">
         </activity>
         <activity android:name=".BuzzerCountsActivity"

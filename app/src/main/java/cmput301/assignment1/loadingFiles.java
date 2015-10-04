@@ -18,7 +18,7 @@ import java.util.Scanner;
 /**
  * Created by JustinWong on 15-10-03.
  */
-public class loadingFiles extends Activity {
+public class loadingFiles {
 
     public static final String FILENAME = "reaction.sav";
 
