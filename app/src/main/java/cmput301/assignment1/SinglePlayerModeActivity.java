@@ -74,8 +74,6 @@ public class SinglePlayerModeActivity extends Activity{
                         long ltimes = (System.currentTimeMillis() - initialTime);
                         int itimes = (int) ltimes;
 
-                        loadingFiles.Rtimes.add(Integer.toString(itimes));
-                        //next line used to cause the app to crash.
                         saving.saveInFile(itimes, getApplicationContext());
                         //do I need this?
                         setResult(RESULT_OK);
@@ -83,7 +81,7 @@ public class SinglePlayerModeActivity extends Activity{
                         AlertDialog.Builder builder = new AlertDialog.Builder(SinglePlayerModeActivity.this);
                         builder.setTitle("You Did It!")
                                 .setCancelable(false)
-                                .setMessage("Your time was " + (System.currentTimeMillis() - initialTime) + " milliseconds. Play Again ?")
+                                .setMessage("Your time was " + (itimes) + " milliseconds. Play Again ?")
                                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int num) {
                                         dialog.cancel();
