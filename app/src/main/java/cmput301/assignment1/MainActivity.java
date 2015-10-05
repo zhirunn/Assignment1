@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         threeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, OptionsActivity.class));
+                startActivity(new Intent(MainActivity.this, StatisticsActivity.class));
             }
         });
     }

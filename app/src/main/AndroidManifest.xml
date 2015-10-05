@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/sample_button"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -30,13 +30,13 @@
         <activity android:name=".FourPlayerModeActivity"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".OptionsActivity"
+        <activity android:name=".StatisticsActivity"
             android:label="@string/app_name">
         </activity>
         <activity android:name=".ReactionTimesActivity"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".StatisticsActivity"
+        <activity android:name=".ReactionStatsActivity"
             android:label="@string/app_name">
         </activity>
         <activity android:name=".ShowElementsInArrayListActivity"
@@ -45,6 +45,16 @@
         <activity android:name=".BuzzerCountsActivity"
             android:label="@string/app_name">
         </activity>
+        <activity android:name=".ButtonClick2P_Activity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ButtonClick3P_Activity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ButtonClick4P_Activity"
+            android:label="@string/app_name">
+        </activity>
+
     </application>
 
 </manifest>

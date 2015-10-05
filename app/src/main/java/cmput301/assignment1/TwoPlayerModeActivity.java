@@ -15,6 +15,8 @@ import android.widget.TextView;
  */
 public class TwoPlayerModeActivity extends Activity{
 
+    numberofclicks clicks = new numberofclicks();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twoplayer);
@@ -26,6 +28,7 @@ public class TwoPlayerModeActivity extends Activity{
         ImageButton p2Button = (ImageButton) findViewById(R.id.buttonP2);
         p1Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p1_2++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(TwoPlayerModeActivity.this);
                 builder.setTitle("Player1 Clicked The Button!")
                         .setCancelable(false)
@@ -51,6 +54,7 @@ public class TwoPlayerModeActivity extends Activity{
 
         p2Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p2_2++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(TwoPlayerModeActivity.this);
                 builder.setTitle("Player2 Clicked The Button!")
                         .setCancelable(false)

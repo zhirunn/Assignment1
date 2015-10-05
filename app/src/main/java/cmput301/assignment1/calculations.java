@@ -2,15 +2,11 @@ package cmput301.assignment1;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by JustinWong on 15-10-03.
  */
 public class calculations {
-
-    //calculations are bugged but I can't seem to find the error
-    //if you find out how to fix the bug, please tell me
 
     public String minValue(ArrayList<String> aList) {
         int min = Integer.parseInt(aList.get(0));
@@ -23,6 +19,46 @@ public class calculations {
             }
         }
         return Integer.toString(min);
+    }
+
+    public String min10Value(ArrayList<String> aList) {
+        if (aList.size() >= 10) {
+            ArrayList<String> aList10 = new ArrayList<String>();
+            for (int c = 1; c <= 10; c++) {
+                aList10.add(aList.get(aList.size() - c));
+            }
+            int min = Integer.parseInt(aList10.get(0));
+            for (int s = 1; s < aList10.size(); s++) {
+                int currentInt = Integer.parseInt(aList10.get(s));
+                if (currentInt < min) {
+                    min = currentInt;
+                }
+            }
+            return Integer.toString(min);
+        }
+        else {
+            return "null";
+        }
+    }
+
+    public String min100Value(ArrayList<String> aList) {
+        if (aList.size() >= 100) {
+            ArrayList<String> aList100 = new ArrayList<String>();
+            for (int c = 1; c <= 100; c++) {
+                aList100.add(aList.get(aList.size() - c));
+            }
+            int min = Integer.parseInt(aList100.get(0));
+            for (int s = 1; s < aList100.size(); s++) {
+                int currentInt = Integer.parseInt(aList100.get(s));
+                if (currentInt < min) {
+                    min = currentInt;
+                }
+            }
+            return Integer.toString(min);
+        }
+        else {
+            return "null";
+        }
     }
 
     public String maxValue(ArrayList<String> aList) {
@@ -38,10 +74,145 @@ public class calculations {
         return Integer.toString(max);
     }
 
-
-    public void averageValue() {
+    public String max10Value(ArrayList<String> aList) {
+        if (aList.size() >= 10) {
+            ArrayList<String> aList10 = new ArrayList<String>();
+            for (int c = 1; c <= 10; c++) {
+                aList10.add(aList.get(aList.size() - c));
+            }
+            int max = Integer.parseInt(aList10.get(0));
+            for (int s = 1; s < aList10.size(); s++) {
+                int currentInt = Integer.parseInt(aList10.get(s));
+                if (currentInt > max) {
+                    max = currentInt;
+                }
+            }
+            return Integer.toString(max);
+        }
+        else {
+            return "null";
+        }
     }
 
-    public void medianValue() {
+    public String max100Value(ArrayList<String> aList) {
+        if (aList.size() >= 100) {
+            ArrayList<String> aList100 = new ArrayList<String>();
+            for (int c = 1; c <= 100; c++) {
+                aList100.add(aList.get(aList.size() - c));
+            }
+            int max = Integer.parseInt(aList100.get(0));
+            for (int s = 1; s < aList100.size(); s++) {
+                int currentInt = Integer.parseInt(aList100.get(s));
+                if (currentInt > max) {
+                    max = currentInt;
+                }
+            }
+            return Integer.toString(max);
+        }
+        else {
+            return "null";
+        }
     }
+
+    public String averageValue(ArrayList<String> aList) {
+        int sum = Integer.parseInt(aList.get(0));
+
+        for (int s = 1; s < aList.size(); s++){
+            int currentInt = Integer.parseInt(aList.get(s));
+                sum = currentInt + sum;
+            }
+        return Integer.toString(sum/aList.size());
+    }
+
+    public String average10Value(ArrayList<String> aList) {
+        if (aList.size() >= 10) {
+            ArrayList<String> aList10 = new ArrayList<String>();
+            for (int c = 1; c <= 10; c++) {
+                aList10.add(aList.get(aList.size() - c));
+            }
+            int sum = Integer.parseInt(aList10.get(0));
+            for (int s = 1; s < aList.size(); s++) {
+                int currentInt = Integer.parseInt(aList.get(s));
+                sum = currentInt + sum;
+            }
+            return Integer.toString(sum / aList.size());
+        }
+        else {
+            return "null";
+        }
+    }
+
+    public String average100Value(ArrayList<String> aList) {
+        if (aList.size() >= 100) {
+            ArrayList<String> aList100 = new ArrayList<String>();
+            for (int c = 1; c <= 100; c++) {
+                aList100.add(aList.get(aList.size() - c));
+            }
+            int sum = Integer.parseInt(aList100.get(0));
+            for (int s = 1; s < aList.size(); s++) {
+                int currentInt = Integer.parseInt(aList.get(s));
+                sum = currentInt + sum;
+            }
+            return Integer.toString(sum / aList.size());
+        }
+        else {
+            return "null";
+        }
+    }
+
+    public String medianValue(ArrayList<String> aList) {
+
+        //might be bugged
+        ArrayList<Integer> aListInt = new ArrayList<Integer>();
+        for(String number : aList) {
+            aListInt.add(Integer.parseInt(number));
+        }
+        Collections.sort(aListInt);
+        return Integer.toString(aListInt.get(aListInt.size() / 2));
+
+        //return Integer.toString(Integer.parseInt(aList.get(aList.size() / 2)));
+
+    }
+
+    public String median10Value(ArrayList<String> aList) {
+        if (aList.size() >= 10) {
+            //might be bugged
+            ArrayList<Integer> aListInt = new ArrayList<Integer>();
+            for (String number : aList) {
+                aListInt.add(Integer.parseInt(number));
+            }
+            ArrayList<Integer> aList10 = new ArrayList<Integer>();
+            for (int c = 1; c <= 10; c++) {
+                aList10.add(aListInt.get(aListInt.size() - c));
+            }
+            Collections.sort(aList10);
+            return Integer.toString(aList10.get(aList10.size() / 2));
+            //return Integer.toString(Integer.parseInt(aList.get(aList.size() / 2)));
+        }
+        else {
+            return "null";
+        }
+    }
+
+    public String median100Value(ArrayList<String> aList) {
+        if (aList.size() >= 100) {
+            //might be bugged
+            ArrayList<Integer> aListInt = new ArrayList<Integer>();
+            for (String number : aList) {
+                aListInt.add(Integer.parseInt(number));
+            }
+            ArrayList<Integer> aList100 = new ArrayList<Integer>();
+            for (int c = 1; c <= 100; c++) {
+                aList100.add(aListInt.get(aListInt.size() - c));
+            }
+            Collections.sort(aList100);
+            return Integer.toString(aList100.get(aList100.size() / 2));
+            //return Integer.toString(Integer.parseInt(aList.get(aList.size() / 2)));
+        }
+        else {
+            return "null";
+        }
+    }
+
+
 }

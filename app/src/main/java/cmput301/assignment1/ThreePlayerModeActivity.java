@@ -15,6 +15,8 @@ import android.widget.TextView;
  */
 public class ThreePlayerModeActivity extends Activity{
 
+    numberofclicks clicks = new numberofclicks();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_threeplayer);
@@ -27,6 +29,7 @@ public class ThreePlayerModeActivity extends Activity{
         ImageButton p3Button = (ImageButton) findViewById(R.id.buttonP3);
         p1Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p1_3++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(ThreePlayerModeActivity.this);
                 builder.setTitle("Player1 Clicked The Button!")
                         .setCancelable(false)
@@ -52,6 +55,7 @@ public class ThreePlayerModeActivity extends Activity{
 
         p2Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p2_3++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(ThreePlayerModeActivity.this);
                 builder.setTitle("Player2 Clicked The Button!")
                         .setCancelable(false)
@@ -77,6 +81,7 @@ public class ThreePlayerModeActivity extends Activity{
 
         p3Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p3_3++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(ThreePlayerModeActivity.this);
                 builder.setTitle("Player3 Clicked The Button!")
                         .setCancelable(false)

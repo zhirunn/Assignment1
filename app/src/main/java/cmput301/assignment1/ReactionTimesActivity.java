@@ -29,7 +29,7 @@ public class ReactionTimesActivity extends Activity {
         statisticsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ReactionTimesActivity.this, StatisticsActivity.class));
+                startActivity(new Intent(ReactionTimesActivity.this, ReactionStatsActivity.class));
             }
         });
 

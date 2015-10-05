@@ -5,15 +5,15 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 /**
  * Created by JustinWong on 15-09-30.
  */
 public class FourPlayerModeActivity extends Activity{
+
+    numberofclicks clicks = new numberofclicks();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,7 @@ public class FourPlayerModeActivity extends Activity{
         ImageButton p4Button = (ImageButton) findViewById(R.id.buttonP4);
         p1Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p1_4++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(FourPlayerModeActivity.this);
                 builder.setTitle("Player1 Clicked The Button!")
                         .setCancelable(false)
@@ -53,6 +54,7 @@ public class FourPlayerModeActivity extends Activity{
 
         p2Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p2_4++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(FourPlayerModeActivity.this);
                 builder.setTitle("Player2 Clicked The Button!")
                         .setCancelable(false)
@@ -78,6 +80,7 @@ public class FourPlayerModeActivity extends Activity{
 
         p3Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p3_4++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(FourPlayerModeActivity.this);
                 builder.setTitle("Player3 Clicked The Button!")
                         .setCancelable(false)
@@ -103,6 +106,7 @@ public class FourPlayerModeActivity extends Activity{
 
         p4Button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                clicks.p4_4++;
                 AlertDialog.Builder builder = new AlertDialog.Builder(FourPlayerModeActivity.this);
                 builder.setTitle("Player4 Clicked The Button!")
                         .setCancelable(false)
