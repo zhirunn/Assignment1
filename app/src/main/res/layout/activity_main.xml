@@ -27,6 +27,14 @@
         android:layout_above="@+id/buttonThree"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:id="@+id/fourTextView"
+        android:text="Clear Data" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_above="@+id/buttonFour"
+        android:layout_alignEnd="@+id/buttonFour" />
+
     <ImageButton
         android:id="@+id/buttonOne"
         android:src="@drawable/brown"
@@ -63,5 +71,19 @@
         android:layout_marginBottom="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/buttonFour"
+        android:src="@drawable/pink"
+        android:background="@null"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/buttonTwo" />
+
+
 
 </RelativeLayout>

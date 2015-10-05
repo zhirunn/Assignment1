@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton oneButton = (ImageButton) findViewById(R.id.buttonOne);
         ImageButton twoButton = (ImageButton) findViewById(R.id.buttonTwo);
         ImageButton threeButton = (ImageButton) findViewById(R.id.buttonThree);
+        ImageButton fourButton = (ImageButton) findViewById(R.id.buttonFour);
         oneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,6 +34,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, StatisticsActivity.class));
+            }
+        });
+        fourButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadingFiles.Rtimes.clear();
+                setResult(RESULT_OK);
+                numberofclicks.p1_2 = 0;
+                numberofclicks.p2_2 = 0;
+                numberofclicks.p1_3 = 0;
+                numberofclicks.p2_3 = 0;
+                numberofclicks.p3_3 = 0;
+                numberofclicks.p1_4 = 0;
+                numberofclicks.p2_4 = 0;
+                numberofclicks.p3_4 = 0;
+                numberofclicks.p4_4 = 0;
             }
         });
     }
