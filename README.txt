@@ -1,6 +1,6 @@
 README
 
-All images were taken from 
+All images were taken from
 https://commons.wikimedia.org/wiki/Round_button_icons
 A link to the licensing of these images can be found below
 https://creativecommons.org/licenses/by-sa/3.0/deed.en
